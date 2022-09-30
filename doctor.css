@@ -1,0 +1,473 @@
+ *{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+@font-face {
+    font-family:myFirstFont;
+    src: url("Roboto/Roboto-Black.ttf");
+}
+@font-face{
+    font-family:mySecondFont;
+    src:url("Merriweather/Merriweather-Light.ttf")
+}
+@font-face{
+    font-family:myThirdFont;
+    src:url("Oswald/static/Oswald-Light.ttf");
+}
+@font-face{
+    font-family:myFourthFont;
+    src:url("Source_Sans_Pro/SourceSansPro-Light.ttf");
+}
+body{
+    width:100%; 
+}
+ /* THE HEADER SECTION STYLING */
+ header{
+    width:100%;
+    background:blue;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+/* THE NAVIGATION */
+.main-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:99%;
+    margin:0 auto;
+    padding:10px;
+}
+.main-item1{
+    width:30%;
+}
+.logoimg{
+    border-radius:50px;
+}
+.main-item1 img{
+    width:10%;
+}
+nav{
+    width:35%;
+}
+nav ul{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+}
+nav ul li{
+    list-style:none;
+}
+nav ul li a{
+    display:block;
+    text-decoration:none;
+    text-transform:capitalize;
+    color:#fff;
+    font-family:myFourthFont;
+    font-size:0.9em;
+    width:100%;
+    transition:all 1s;
+}
+nav ul li a:hover{
+    padding:10px;
+    background:#fff;
+    color:blue;
+    border-radius:5px;
+}
+#arm{
+    display:none;
+}
+#cancel{
+    display:none;
+}
+/* END OF NAVIGATION */
+/* END OF HEADER */
+
+/* THE HEADING */
+.heading{
+    background:url(images/docbackground.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    padding:200px 0;
+    background-blend-mode:overlay;
+    background-color:rgba(0,0,0,.3);
+}
+.heading h3{
+    color:#fff;
+    font-family:myFirstFont;
+    font-size:2em;
+    margin-left:50px;
+    text-transform:capitalize;
+    text-align:center;
+}
+.heading form{
+    margin-left:50px;
+    margin-top:20px;
+    width:80%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.heading form input{
+    display:block;
+    width:30%;
+    padding:15px;
+    margin:10px auto;
+    border:none;
+    border-radius:10px;
+    font-family:mySecondFont;
+    font-size:0.7em;
+}
+.heading form input[type="submit"]{
+    width:15%;
+    text-transform:capitalize;
+    text-align:center;
+    background:blue;
+    color:#fff;
+    transition:all 2s;
+}
+.heading form input[type="submit"]:hover{
+    background:#fff;
+    color:blue;
+}
+/* END OF HEADING */
+
+/* DOCTORS */
+.modal{
+    display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width:100%;
+    height:100%; 
+    overflow:auto;
+}
+.modal-content{
+    background-color:blue;
+    margin:60px auto;
+    padding:10px;
+    border: 1px solid #888;
+    width:30%;
+}
+#close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal-content form{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    margin:10px auto;
+    flex-wrap:wrap;
+}
+.modal-content form input{
+    margin:10px auto;
+    width:100%;
+    padding:10px;
+    border:none;
+    text-transform:capitalize;
+    font-family:mySecondFont;
+    font-size:0.7em;
+    /* border-radius:10px; */
+}
+.modal-content form input[type="submit"]{
+    width:50%;
+    color:blue;
+    background:#fff;
+    cursor: pointer;
+}
+.doctors{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    margin:0 auto;
+    flex-wrap:wrap;
+    /* background:blue; */
+}
+.doctor-main{
+    width:32%;
+    margin:20px auto 0;
+    /* background:blue; */
+}
+.doctor-main img{
+    width:100%;
+}
+.doctor-main p{
+    margin:10px auto;
+    font-family:mySecondFont;
+    font-size:0.8em;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+.doctor-main p span{
+    display:inline-block;
+    margin-left:10px;
+    text-transform:capitalize;
+    font-weight:lighter;
+}
+.info{
+    margin:10px auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+}
+.info a{
+    display:block;
+    text-decoration:none;
+    /* text-transform:capitalize; */
+    font-family:mySecondFont;
+    font-size:0.8em;
+    color:#fff;
+    background:blue;
+    width:40%;
+    padding:10px;
+    text-align:center;
+    border-radius:10px;
+    transition:all 2s;
+}
+.info a:hover{
+    background:black;
+}
+
+.info span{
+    display:block;
+    text-transform:uppercase;
+    font-family:mySecondFont;
+    font-size:0.8em;
+}
+/* END OF DOCTORS */
+
+/* FOOTER */
+footer{
+    background:blue;
+    margin:5px auto 0;
+}
+.main-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:95%;
+    margin:0 auto;
+}
+.main-footer div,.footer-menu,.form{
+    width:32%;
+    margin:20px auto;
+}
+.main-footer div p{
+    line-height:1.5em;
+    color:#fff;
+    margin:20px auto;
+    font-size:0.8em;
+    text-align:justify;
+    font-family:mySecondFont;
+}
+.footer-menu ul{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-direction:column;
+}
+.footer-menu ul li a{
+    display:block;
+    color:black;
+    margin:1.5px auto;
+    padding:10px;
+    color:#fff;
+    width:100%;
+}
+.form h5{
+    text-align:center;
+    color:#fff;
+    font-family:mySecondFont;
+    margin:10px auto 0;
+    font-size:0.8em;
+}
+.form{
+    text-align:center;
+}
+.form input{
+    width:80%;
+    padding:10px;
+    margin:10px auto;
+    border-radius:50px;
+    border:none;
+}
+.form textarea{
+    width:80%;
+    margin:10px auto 0;
+    border-radius:10px;
+}
+.form input[type="submit"]{
+    width:30%;
+    margin:0 auto 10px;
+    cursor:pointer;
+}
+.footer-links{
+    text-align:center;
+    margin:10px auto 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:15%;
+}
+.footer-links a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    text-transform:capitalize;
+    font-family:mySecondFont;
+    font-size:1.5em;
+}
+.copyright{
+    margin:20px auto 0;
+    text-align:center;
+    color:#fff;
+    font-family:mySecondFont;
+    font-size:0.6em;
+}
+/* END OF FOOTER */
+
+/* MEDIA QUERY */
+@media screen and (max-width:900px){
+    body{
+        position: relative;
+        width:100%;
+    }
+    /* THE HEADER */
+    /* THE NAVIGATION */
+    .logoimg{
+        width:80%;
+    }
+    #arm{
+        display:block;
+    }
+    #cancel{
+        width:5%;
+        margin:20px 20px 20px;
+    }
+    #nav{
+        display:none;
+        height:60vh;
+        background:#fff;
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        width:100%;
+        animation-name:see;
+        animation-duration:1s;
+    }
+    @keyframes see {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    #nav ul{
+        flex-direction:column;
+        width:100%;
+    }
+    #nav ul li a{
+        padding:10px;
+        text-align:center;
+        color:blue;
+        margin:5px auto 0;
+    }
+    #nav ul li a:hover{
+        background:blue;
+        color:#fff;
+    }
+    .main-item1{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        width:100%;
+        padding:10px;
+    }
+    .chat{
+        display:none;
+    }
+    /* END OF NAVIGATION */
+    /* END OF HEADER */
+
+    /* THE HEADINNG */
+    .heading{
+        background-position:center;
+        padding:100px 0;
+        background-color:rgba(0,0,0,.5)
+    }
+    .heading h3{
+        margin-left:0;
+        text-align:center;
+        font-size:1.5em;
+    }
+    .heading form{
+        flex-direction:column;
+        width:100%;
+        margin-left:0;
+        margin-top:10px;
+    }
+    .heading form input{
+        width:80%;  
+    }
+    .heading form input[type="submit"]{
+        width:30%;
+    }
+    /* END OF HEADING */
+
+    /* DOCTORS */
+    .modal-content{
+        width:90%;
+        margin:100px auto;
+    }
+    .doctors{
+        flex-direction:column;
+    }
+    .doctor-main{
+        width:90%;
+    }
+    /* END OF DOCTORS */
+
+    /* FOOTER */
+    .main-footer{
+        flex-direction:column;
+    }
+    .main-footer div,.footer-menu,.form{
+        width:98%;
+        margin:10px auto;
+    }
+    .main-footer div p{
+        line-height:1.7em;
+    }
+    .footer-menu ul{
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    .footer-menu ul li{
+        width:30%;
+    }
+    .form h5{
+        margin:15px auto 0;
+    }
+    .form input{
+        margin:20px auto 0;
+    }
+    .form input[type="submit"]{
+        width:35%;
+        margin:10px auto;
+    }
+    .footer-links{
+        width:40%;
+    }
+    /* END OF FOOTER */
+}
+/* END OF MEDIA QUERY */
